@@ -1,5 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Provider from "@/app/provider";
+import Head from "next/head";
+import {Wrapper} from "@/app/wrapper";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +14,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <Head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
+    </Head>
+      <body className={inter.className}>
+      <Provider>
+        <Wrapper  children={children}>
+        </Wrapper>
+      </Provider>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+      </body>
     </html>
   )
 }

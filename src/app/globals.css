@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,11 +18,21 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Roboto, sans-serif;
+  overscroll-behavior: none;
+
+  /*color: rgb(var(--foreground-rgb));*/
+  /*background: linear-gradient(*/
+  /*    to bottom,*/
+  /*    transparent,*/
+  /*    rgb(var(--background-end-rgb))*/
+  /*  )*/
+  /*  rgb(var(--background-start-rgb));*/
+}
+.header-bg{
+/*background: linear-gradient(341deg, #6233C8 0%, #8E65F3 100%);*/
+/*  opacity: 0.5;*/
+}
+.card-bg{
+  background: linear-gradient(341deg, #6233C8 0%, #8E65F3 100%);
 }
